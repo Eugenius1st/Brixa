@@ -12,12 +12,12 @@ const MainProducr = () => {
     },
     {
       title: "째즈사과",
-      state: "SOLD OUT",
+      state: "매진",
       link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
     },
     {
       title: "사나노골드",
-      state: "SOLD OUT",
+      state: "매진",
       link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
     },
     {
@@ -75,7 +75,7 @@ const MainProducr = () => {
                 ${
                   el.state === "HOT"
                     ? "bg-red-600 animate-blink"
-                    : el.state === "SOLD OUT"
+                    : el.state === "매진"
                     ? "bg-gray-600"
                     : el.state === "BEST"
                     ? "bg-yellow-500"
