@@ -57,11 +57,11 @@ const MainProducr = () => {
         {products.map((el, idx) => (
           <div
             key={el.title}
-            className="flex-shrink-0 border  w-[40vh] flex-col flex-grow-0 drop-shadow-sm m-2 bg-white items-center flex rounded-[5px] p-3 text-sm"
+            className="flex-shrink-0 border  w-[16rem] flex-col flex-grow-0 drop-shadow-sm m-2 bg-white items-center flex rounded-[5px] p-3 text-sm"
           >
             <img
               src={images[idx % 5]}
-              className="w-full h-[20vh] object-cover rounded-[5px]"
+              className="w-full h-[12rem] object-cover rounded-[5px]"
               alt={el.title}
             />
             <div className="text-red-500 flex text-start w-full mt-[4px]">

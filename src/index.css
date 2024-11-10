@@ -59,7 +59,7 @@ code {
 .slide-track {
   display: flex;
   width: 100%;
-  animation: slide 40s linear infinite;
+  animation: slide 30s linear infinite;
 }
 .slide-item {
   flex: 0 0 16.666%;

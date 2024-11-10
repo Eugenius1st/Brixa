@@ -30,7 +30,7 @@ const Merit = () => {
                   : fifthMT
               }
               alt={el.title}
-              className="h-[8vh] m-auto"
+              className="h-[2rem] m-auto"
             />
             <div
               className="text-[10px] mx-auto mt-[4px] w-[50px] break-words"
