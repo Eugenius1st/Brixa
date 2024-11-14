@@ -30,7 +30,7 @@ const Advertise = () => {
           alt="firstAD"
           className="object-cover w-full h-full"
         />
-        <div className="z-[100] text-[24px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
+        <div className="z-[100] text-[20px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
           <div>청년농부가 매일아침</div>
           <div>갓 따온 프리미엄 신선사과</div>
         </div>
@@ -41,7 +41,7 @@ const Advertise = () => {
           alt="secondAD"
           className="object-cover w-full h-full"
         />
-        <div className="z-[100] text-[24px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
+        <div className="z-[100] text-[20px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
           <div>성실하고 정직하게</div>
           <div>자연을 그대로를 담아냅니다</div>
         </div>
@@ -52,9 +52,9 @@ const Advertise = () => {
           alt="thirdAD"
           className="object-cover w-full h-full"
         />
-        <div className="z-[100] text-[24px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
+        <div className="z-[100] text-[20px] fixed top-0 text-white w-full flex-col items-center h-full flex justify-center">
           <div>1962년부터 뿌리깊게 키워낸</div>
-          <div>예산군 응봉면 전통 사과 Brixa</div>
+          <div>전통있는 예산사과</div>
         </div>
       </SwiperSlide>
     </Swiper>

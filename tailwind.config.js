@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "brixa-brown": "#5D2D00", // 새로운 색상 추가
+        "gm-brown": "#8A7048", // 새로운 색상 추가
       },
       animation: {
         blink: "blink 0.5s ease-in-out infinite", // 1초 간격으로 깜빡임

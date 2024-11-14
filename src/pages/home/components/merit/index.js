@@ -33,7 +33,7 @@ const Merit = () => {
               className="h-[2rem] m-auto"
             />
             <div
-              className="text-[10px] mx-auto mt-[4px] w-[50px] break-words"
+              className="text-[10px] mx-auto mt-[4px] text-gm-brown w-[50px] break-words"
               style={{ wordBreak: "break-all" }}
             >
               {el.title}

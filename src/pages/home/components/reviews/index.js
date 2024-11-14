@@ -52,7 +52,7 @@ const MainProducr = () => {
 
   return (
     <div className="mt-[10px] slide-container">
-      <div className="text-[20px] text-brixa-brown px-[10px]">후기</div>
+      <div className="text-[20px] text-gm-brown px-[10px]">후기</div>
       <div className="slide-track">
         {products.map((el, idx) => (
           <div

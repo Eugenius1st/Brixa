@@ -10,6 +10,7 @@ import Reviews from "pages/home/components/reviews";
 const Home = () => {
   return (
     <div className="wrapper">
+      <div className="h-[20px]"></div>
       <Header />
       <div className="relative z-[1]">
         <Advertise />

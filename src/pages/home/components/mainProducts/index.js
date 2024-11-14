@@ -8,35 +8,35 @@ const MainProducr = () => {
     {
       title: "부사사과",
       state: "HOT",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
+      link: "https://smartstore.naver.com/goodmoningfarm/products/11132495734",
     },
     {
       title: "째즈사과",
       state: "매진",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
+      link: "f",
     },
     {
       title: "사나노골드",
       state: "매진",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
+      link: "https://smartstore.naver.com/goodmoningfarm/products/11132580584",
     },
     {
       title: "아로니아 사과즙",
       state: "BEST",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650?nl-query=%EA%B5%BF%EB%AA%A8%EB%8B%9D%20%EB%86%8D%EC%9E%A5&NaPm=ci%3D62909c08b65d425d9a1e7ea2a1cb996b%7Cct%3Dm39zk17k%7Ctr%3Dnslsl%7Csn%3D1787656%7Chk%3D4f019efc509a6354f8be7c2957c6da150f1859cf",
+      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650",
     },
   ];
   return (
     <div className="px-[10px] mt-[15px] ">
-      <div className="text-[20px] text-brixa-brown">대표상품</div>
+      <div className="text-[20px] text-gm-brown">대표상품 바로가기</div>
       <div className="grid grid-cols-4 mt-[10px] gap-[5px]">
         {products.map((el) => (
           <a key={el.title} target="_blank" href={el.link} rel="noreferrer">
             <div
               // className={`object-cover w-full aspect-w-1 aspect-h-1
-              // border rounded-[10px] border-brixa-brown
+              // border rounded-[10px] border-gm-brown
               // m-auto`}
-              className="w-full  aspect-square border rounded-[10px] border-brixa-brown overflow-hidden"
+              className="w-full  aspect-square border rounded-[10px] border-gm-brown overflow-hidden"
             >
               <img
                 src={
