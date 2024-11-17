@@ -6,12 +6,15 @@ import { ReactComponent as InstarIcon } from "assets/svg/instar.svg";
 // modals
 import PhoneModal from "components/modal/PhoneModal";
 import AddressModal from "components/modal/AddressModal";
-
+import NaverTalkTalkModal from "components/modal/NaverTalkTalkModal";
+// icons
+import { BsChatDotsFill } from "react-icons/bs";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 const Nav = () => {
   const [isAdressShow, setIsAdressShow] = useState(false);
 
   return (
-    <nav className="left-0  py-[10px] bg-[#FAF5EC] text-gm-brown items-center justify-between w-full fixed bottom-0">
+    <nav className="left-0  py-[10px] bg-[#FAF5EC] text-gm-brown items-center justify-between w-full fixed bottom-0 font-sans font-bold">
       <div className="flex justify-between px-[10px] max-w-4xl m-auto">
         <PhoneModal
           modalBtn={
@@ -20,7 +23,7 @@ const Nav = () => {
                 className="m-auto w-[40px] text-[#8A7048]"
                 aria-label="PhoneIcon"
               />
-              <div className="text-center text-[12px] m-auto">연락정보</div>
+              <div className="text-center text-[10px] m-auto">연락정보</div>
             </div>
           }
         />
@@ -35,25 +38,29 @@ const Nav = () => {
                 className="m-auto w-[24px] text-gm-brown"
                 aria-label="PhoneIcon"
               />
-              <div className="text-center text-[12px] m-auto">주소</div>
+              <div className="text-center text-[10px] m-auto">주소</div>
             </div>
           }
         />
-        <button
-          onClick={() => alert("준비중입니다.")}
-          className="flex-col justify-between flex h-[60px]"
-        >
-          <NaverIcon className="m-auto w-[25px]" aria-label="PhoneIcon" />
 
-          <div className="text-center text-[12px] m-auto">톡톡문의</div>
-        </button>
-        <button
-          onClick={() => alert("준비중입니다.")}
+        <NaverTalkTalkModal
+          modalBtn={
+            <div className="flex-col justify-between flex h-[60px]">
+              {/* <NaverIcon className="m-auto w-[25px]" aria-label="PhoneIcon" /> */}
+              <BsChatDotsFill className="m-auto w-[28px] h-[28px]" />
+              <div className="text-center text-[10px] m-auto">톡톡문의</div>
+            </div>
+          }
+        />
+        <a
+          href="https://www.instagram.com/good.morning.farm/"
+          target="_blank"
           className="flex-col justify-between flex h-[60px]"
+          rel="noreferrer"
         >
           <InstarIcon className="m-auto w-[30px]" aria-label="PhoneIcon" />
-          <div className="text-center text-[12px] m-auto">인스타그램</div>
-        </button>
+          <div className="text-center text-[10px] m-auto">인스타그램</div>
+        </a>
       </div>
     </nav>
   );

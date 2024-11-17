@@ -53,7 +53,7 @@ const MainProducr = () => {
   return (
     <div className="mt-[10px] slide-container">
       <div className="text-[20px] text-gm-brown px-[10px]">후기</div>
-      <div className="slide-track">
+      <div className="slide-track font-sans font-bold">
         {products.map((el, idx) => (
           <div
             key={el.title}
@@ -75,7 +75,7 @@ const MainProducr = () => {
               {el.name}
             </div>
             <div className="text-start w-full ">{el.title}</div>
-            <div className="text-start w-full text-gray-600 line-clamp-4">
+            <div className="text-start w-full text-gray-600 line-clamp-4 font-medium">
               {el.describe}
             </div>
           </div>

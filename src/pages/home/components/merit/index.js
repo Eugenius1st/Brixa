@@ -13,7 +13,7 @@ const Merit = () => {
     { title: "17brix당도" },
   ];
   return (
-    <div className="px-[10px] mt-[10px]">
+    <div className="px-[10px] mt-[10px] font-sans font-bold">
       <div className="flex justify-between items-center">
         {appleMerits.map((el, idx) => (
           <div className="text-center" key={el.title}>
@@ -33,7 +33,7 @@ const Merit = () => {
               className="h-[2rem] m-auto"
             />
             <div
-              className="text-[10px] mx-auto mt-[4px] text-gm-brown w-[50px] break-words"
+              className="text-[10px] mx-auto mt-[4px] text-gm-brown w-full break-words"
               style={{ wordBreak: "break-all" }}
             >
               {el.title}

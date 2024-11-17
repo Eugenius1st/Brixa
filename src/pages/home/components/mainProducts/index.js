@@ -11,32 +11,39 @@ const MainProducr = () => {
       link: "https://smartstore.naver.com/goodmoningfarm/products/11132495734",
     },
     {
-      title: "째즈사과",
-      state: "매진",
-      link: "f",
-    },
-    {
-      title: "사나노골드",
-      state: "매진",
+      title: "시나노골드",
+      state: "NEW",
       link: "https://smartstore.naver.com/goodmoningfarm/products/11132580584",
     },
     {
       title: "아로니아 사과즙",
-      state: "BEST",
+      state: "HOT",
       link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650",
+    },
+    {
+      title: "째즈사과",
+      state: "준비중",
+      link: "",
     },
   ];
   return (
     <div className="px-[10px] mt-[15px] ">
       <div className="text-[20px] text-gm-brown">대표상품 바로가기</div>
-      <div className="grid grid-cols-4 mt-[10px] gap-[5px]">
+      <div className="grid grid-cols-4 mt-[10px] gap-[5px] font-sans font-bold">
         {products.map((el) => (
-          <a key={el.title} target="_blank" href={el.link} rel="noreferrer">
+          <a
+            key={el.title}
+            target="_blank"
+            {...(el.link ? { href: el.link } : {})} // el.link가 있을 때만 href를 설정
+            rel="noreferrer"
+          >
             <div
               // className={`object-cover w-full aspect-w-1 aspect-h-1
               // border rounded-[10px] border-gm-brown
               // m-auto`}
-              className="w-full  aspect-square border rounded-[10px] border-gm-brown overflow-hidden"
+              className="w-full  aspect-square border rounded-[10px] border-gm-brown overflow-hidden
+
+              "
             >
               <img
                 src={
@@ -44,7 +51,7 @@ const MainProducr = () => {
                     ? busa
                     : el.title === "째즈사과"
                     ? jazz
-                    : el.title === "사나노골드"
+                    : el.title === "시나노골드"
                     ? sinano
                     : el.title === "아로니아 사과즙"
                     ? aro
@@ -61,21 +68,21 @@ const MainProducr = () => {
                         ? "text-[#FF5C67]"
                         : el.title === "째즈사과"
                         ? "text-[#BA4B5B]"
-                        : el.title === "사나노골드"
+                        : el.title === "시나노골드"
                         ? "text-[#D6B01C]"
                         : el.title === "아로니아 사과즙"
                         ? "text-[#CE84FF]"
                         : "text-purple-500"
                     }
-                text-[14px] break-words text-center mt-[4px] flex justify-center items-start leading-tight`}
+                text-[14px] break-words text-center mt-[4px]  justify-center items-start leading-tight`}
               style={{ wordBreak: "keep-all" }}
             >
-              <span
-                className={` top-0 left-0 text-white z-[1] text-[8px] px-[3px] pt-[2px] mr-[4px] rounded-[5px]
+              <div
+                className={`w-fit text-white z-[1] text-[10px] px-[3px] mr-[4px] rounded-[5px]
                 ${
                   el.state === "HOT"
                     ? "bg-red-600 animate-blink"
-                    : el.state === "매진"
+                    : el.state === "준비중"
                     ? "bg-gray-600"
                     : el.state === "BEST"
                     ? "bg-yellow-500"
@@ -84,7 +91,7 @@ const MainProducr = () => {
                 `}
               >
                 {el.state}
-              </span>
+              </div>
               <span>{el.title}</span>
             </div>
           </a>

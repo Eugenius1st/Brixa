@@ -22,7 +22,7 @@ const PhoneModal = ({ modalBtn }) => {
               <span>연락정보</span>
               <button onClick={() => setShow(false)}>X</button>
             </div>
-            <div className="text-black mt-[10px] ">
+            <div className="text-black mt-[10px] font-sans font-bold">
               <div className="text-[18px]">주문전화</div>
               <div className="">
                 <span>010 5636 8421</span>

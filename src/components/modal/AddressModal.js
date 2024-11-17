@@ -23,7 +23,7 @@ const PhoneModal = ({ modalBtn }) => {
               <span>굿모닝 농장 주소</span>
               <button onClick={() => setShow(false)}>X</button>
             </div>
-            <div className="text-black mt-[10px] ">
+            <div className="text-black mt-[10px] font-bold font-sans">
               <a
                 target="_blank"
                 href="https://naver.me/xZ3khHmN"
@@ -33,10 +33,12 @@ const PhoneModal = ({ modalBtn }) => {
                 <img src={farm} alt="farm" />
               </a>
               <div className="mt-[10px]">
-                <span>충남 예산군 응봉면 증곡길 87-7</span>
+                <span className="mr-[10px]">
+                  충남 예산군 응봉면 증곡길 87-7
+                </span>
                 <button
                   onClick={() => handleCopy("충남 예산군 응봉면 증곡길 87-7")}
-                  className=" border border-gray-400 rounded-xl ml-[10px] px-[4px] py-[4px] text-[12px] text-gray-500"
+                  className=" border border-gray-400 rounded-xl  px-[4px] py-[4px] text-[12px] text-gray-500"
                 >
                   복사하기
                 </button>
