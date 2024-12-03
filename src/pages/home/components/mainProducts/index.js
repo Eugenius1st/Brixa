@@ -1,33 +1,48 @@
+import { useState } from "react";
+
 import aro from "assets/product/aro.jpg";
 import jazz from "assets/product/jazz.jpg";
 import sinano from "assets/product/sinano.jpg";
 import busa from "assets/product/busa.jpg";
-
+import juice from "assets/product/juice.png";
+import ProductOptionModal from "components/modal/ProductOptionModal";
 const MainProducr = () => {
+  const [kind, setKind] = useState("");
+  const [productOptModal, setProductOptModal] = useState("");
+
   const products = [
     {
       title: "부사사과",
       state: "HOT",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/11132495734",
+      link: "",
+      kind: "busa",
+    },
+    {
+      title: "100% 생사과즙",
+      state: "HOT",
+      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650",
+      kind: "",
     },
     {
       title: "시나노골드",
-      state: "NEW",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/11132580584",
-    },
-    {
-      title: "아로니아 사과즙",
-      state: "HOT",
-      link: "https://smartstore.naver.com/goodmoningfarm/products/5816714650",
+      state: "준비중",
+      link: "",
+      kind: "sinano",
     },
     {
       title: "째즈사과",
       state: "준비중",
       link: "",
+      kind: "",
     },
   ];
   return (
     <div className="px-[10px] mt-[15px] ">
+      <ProductOptionModal
+        kind={kind}
+        isShow={productOptModal}
+        setIsShow={setProductOptModal}
+      />
       <div className="text-[20px] text-gm-brown">대표상품 바로가기</div>
       <div className="grid grid-cols-4 mt-[10px] gap-[5px] font-sans font-bold">
         {products.map((el) => (
@@ -38,9 +53,12 @@ const MainProducr = () => {
             rel="noreferrer"
           >
             <div
-              // className={`object-cover w-full aspect-w-1 aspect-h-1
-              // border rounded-[10px] border-gm-brown
-              // m-auto`}
+              onClick={() => {
+                if (!el.link && el.kind) {
+                  setKind(el.kind);
+                  setProductOptModal(!productOptModal);
+                }
+              }}
               className="w-full  aspect-square border rounded-[10px] border-gm-brown overflow-hidden
 
               "
@@ -53,8 +71,9 @@ const MainProducr = () => {
                     ? jazz
                     : el.title === "시나노골드"
                     ? sinano
-                    : el.title === "아로니아 사과즙"
-                    ? aro
+                    : el.title === "아로니아 사과즙" ||
+                      el.title === "100% 생사과즙"
+                    ? juice
                     : busa
                 }
                 className="w-full h-full object-cover rounded-[10px]"
@@ -78,11 +97,11 @@ const MainProducr = () => {
               style={{ wordBreak: "keep-all" }}
             >
               <div
-                className={`w-fit text-white z-[1] text-[10px] px-[3px] mr-[4px] rounded-[5px]
+                className={`w-fit text-white z-[1] text-[10px] px-[3px] mr-[4px] rounded-[4px]
                 ${
                   el.state === "HOT"
                     ? "bg-red-600 animate-blink"
-                    : el.state === "준비중"
+                    : el.state === "준비중" || el.state === "매진"
                     ? "bg-gray-600"
                     : el.state === "BEST"
                     ? "bg-yellow-500"
